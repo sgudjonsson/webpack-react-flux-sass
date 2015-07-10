@@ -11,9 +11,10 @@ module.exports = {
     },
     module: {
         loaders: [
+          { test: /index\.js$/, loader: 'expose?demo' },
           { test: /\.js$/, loader: 'babel-loader' },
           { test: /\.jsx$/, loader: 'babel-loader' },
-          { test: /\.scss$/, loader: "style!css!sass?sourceMap" }
+          { test: /\.scss$/, loader: 'style!css!sass?sourceMap' }
         ]
     }
 };
